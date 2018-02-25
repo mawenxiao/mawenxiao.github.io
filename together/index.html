@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Wenxiao Let's get together</title>
+	
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="./default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./jquery.js"></script><style type="text/css"></style>
+	<script type="text/javascript" src="./garden.js"></script>
+    <script type="text/javascript" src="./functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 800px; margin-top: 3px; margin-left: 119.5px;">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 机缘巧合，我们在人海中相遇</span><br />
+				<span class="space"/><span class="comments">* 看到你从此我相信你就是那个人</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"bbx"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"闻箫"</span>);<br />
+				<span class="comments">// 2017年12月24日，我们认识彼此 </span><br />
+				i.find(u);<br />
+				<span class="comments">// 2018年1月21日，我们第一次见面 </span><br />
+				i.meet(u);<br />
+				<span class="comments">// 2018年2月10日，我们第二次见面 </span><br />
+				i.know(u);<br />
+				<span class="comments">// 2018年2月20日，我们第三次见面 </span><br />
+				i.like(u);<br />
+				<span class="comments">// 你兴趣广泛、闺蜜也多、喜欢吃菜、旅行、动漫、娱乐八卦。活脱脱一活泼女。还有你的凡凡</span><br />
+				u.Ialready();<br />
+				<span class="comments">// 还有挺会做饭菜啊，挺勤快啊，但是貌似比较宅，不喜欢化妆（其实你的模子不需要化妆也很美）</span><br />
+				u.justknowU();<br />
+				<span class="comments">// 应该是不喜欢微信聊天，所以说的少。其实见面还挺喜欢说话，所以你比较开朗，容易聊得来</span><br />
+				u.frontMe();<br />
+				<span class="comments">// 我喜欢运动，打篮球，看足球，喜欢旅行，吃菜，我想通过自己的努力实现梦想。</span><br />
+				i.justme(u);<br />
+				<span class="comments">// 还有比较不会聊天和交往，你说的双鱼嘛，所以有时候比较粘人，得注意下。</span><br />
+				i.miss(u);<br />
+				<span class="comments">// 但是我想呵护你，会努力工作，给你最好的关心和爱护，不希望你受到一点伤害</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// 生活不是理想，需要不断奋斗！</span><br />
+				<span class="comments">// 所以我会加倍努力，永远守护在你身边！</span><br />
+				<span class="keyword">boolean</span> isDiffcult = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (isDiffcult) {<br />
+				<span class="placeholder"/>i.fightFor(u);<br />
+				<span class="placeholder"/><span class="comments">// 希望你一直开心下去</span><br />
+				<span class="placeholder"/>isDiffcult = i.overCome();<br />
+				}<br />
+				<span class="comments">// 能跟你认识很开心，能跟你相处很幸福</span><br />
+				//I am responsible for good for you;<br />
+				//You are responsible for happiness.<br />
+				//Let's get together!<br />
+			</div>
+
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 205px; left: 629.5px;">
+					<div id="messages" style="display: block;">
+						We have been meet for
+						<div id="elapseClock"><span class="digit">0</span> days <span class="digit">0</span> hours <span class="digit">0</span> minutes <span class="digit">0</span> seconds</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						You say it best when you say nothing at all<div class="signature">:-)</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017,11,24);
+		together.setHours(22);
+		together.setMinutes(22);
+		together.setSeconds(22);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+<div><object id="ClCache" click="sendMsg" host="" width="0" height="0"></object></div></body></html>
